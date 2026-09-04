@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "plugins": [
+    {
+      "slug": "neo-plugin-manager",
+      "plugin_file": "neo-plugin-manager/neo-plugin-manager.php",
+      "name": "Neo Plugin Manager",
+      "version": "0.1.0",
+      "package": "https://github.com/neo-consult/neo-plugin-manager/releases/download/v0.1.0/neo-plugin-manager.zip",
+      "homepage": "https://github.com/neo-consult/neo-plugin-manager",
+      "requires": "6.0",
+      "requires_php": "8.1",
+      "description": "Installation und Updates für veröffentlichte Neo-Plugins."
+    },
+    {
+      "slug": "neo-dashboard",
+      "plugin_file": "neo-dashboard/neo-dashboard-core.php",
+      "name": "Neo Dashboard Core",
+      "version": "3.74.0",
+      "package": "https://github.com/neo-consult/neo-dashboard/releases/download/v3.74.0/neo-dashboard.zip",
+      "homepage": "https://github.com/neo-consult/neo-dashboard",
+      "requires": "6.0",
+      "requires_php": "8.1",
+      "description": "Framework und Navigation für die Neo-Plugins."
+    },
+    {
+      "slug": "neo-calendar",
+      "plugin_file": "neo-calendar/neo-calendar.php",
+      "name": "Neo Calendar",
+      "version": "1.1.7",
+      "package": "https://github.com/neo-consult/neo-calendar/releases/download/v1.1.7/neo-calendar.zip",
+      "homepage": "https://github.com/neo-consult/neo-calendar",
+      "requires": "6.0",
+      "requires_php": "8.1",
+      "description": "Projektkalender, Termine und wiederkehrende Meetings."
+    },
+    {
+      "slug": "neo-surveys",
+      "plugin_file": "neo-surveys/neo-surveys.php",
+      "name": "Neo Surveys",
+      "version": "1.1.7",
+      "package": "https://github.com/neo-consult/neo-surveys/releases/download/v1.1.7/neo-surveys.zip",
+      "homepage": "https://github.com/neo-consult/neo-surveys",
+      "requires": "6.0",
+      "requires_php": "8.1",
+      "description": "Umfragen und Vorlagen im Neo Dashboard."
+    },
+    {
+      "slug": "neo-surveys-extern",
+      "plugin_file": "neo-surveys-extern/neo-surveys-extern.php",
+      "name": "Neo Surveys Extern",
+      "version": "1.2.2",
+      "package": "https://github.com/neo-consult/neo-surveys-extern/releases/download/v1.2.2/neo-surveys-extern.zip",
+      "homepage": "https://github.com/neo-consult/neo-surveys-extern",
+      "requires": "6.0",
+      "requires_php": "8.1",
+      "description": "Externe Teilnahme an Neo-Umfragen."
+    }
+  ]
+}
