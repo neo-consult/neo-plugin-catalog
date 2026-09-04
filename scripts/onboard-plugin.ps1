@@ -106,6 +106,12 @@ try {
     $repoPath = Join-Path $stageRoot $PluginSlug
     New-Item -ItemType Directory -Path $repoPath -Force | Out-Null
     Copy-Item -Path (Join-Path $source '*') -Destination $repoPath -Recurse -Force
+    Write-Utf8File -Path (Join-Path $repoPath '.gitignore') -Content @"
+*.zip
+*.backup
+.phpunit.result.cache
+node_modules/
+"@
     $workflowPath = Join-Path $repoPath '.github\workflows'
     New-Item -ItemType Directory -Path $workflowPath -Force | Out-Null
     Copy-Item -LiteralPath $workflowTemplate -Destination (Join-Path $workflowPath 'release.yml') -Force
