@@ -7,7 +7,7 @@
       "name": "Neo Contacts",
       "version": "0.3.7",
       "package": "https://github.com/neo-consult/neo-contacts/releases/download/v0.3.7/neo-contacts.zip",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "79c3453c40d1b74d3048df67325ca197952e1f0fab53b6093c9c30c3347b6cc5",
       "homepage": "https://github.com/neo-consult/neo-contacts",
       "requires": "6.0",
       "requires_php": "8.1",
