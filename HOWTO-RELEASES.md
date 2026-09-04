@@ -88,6 +88,32 @@ Wichtig:
 - `sha256` muss 64 hexadezimale Zeichen enthalten.
 - Nach der Ersteinrichtung pflegt der Release-Workflow `version`, `package` und `sha256` automatisch.
 
+## Neues Plugin aufnehmen
+
+Für ein neues Neo-Plugin steht ein Onboarding-Skript bereit. Es prüft zunächst die Angaben. Erst mit `-Publish` legt es das öffentliche Repository an, trägt das Plugin als **unveröffentlichten Entwurf** in den Katalog ein, setzt das Actions-Secret und startet den ersten Release.
+
+Vorher muss die Hauptdatei den passenden Update-Header enthalten:
+
+```php
+ * Update URI: https://github.com/neo-consult/neo-beispiel
+```
+
+Aus einem lokalen Checkout von `neo-plugin-catalog`:
+
+```powershell
+Set-Location C:\Pfad\zu\neo-plugin-catalog
+.\scripts\onboard-plugin.ps1 `
+  -PluginSlug neo-beispiel `
+  -PluginName 'Neo Beispiel' `
+  -SourcePath C:\xampp\htdocs\wordpress\wp-content\plugins\neo-beispiel `
+  -MainPluginFile neo-beispiel.php `
+  -Description 'Kurze Beschreibung des Plugins'
+```
+
+Die Ausgabe muss „Prüfung erfolgreich“ melden. Danach denselben Aufruf mit `-Publish` wiederholen. Das Skript fragt den Fine-grained Token verdeckt ab; er wird weder gespeichert noch ausgegeben. Er benötigt ausschließlich Zugriff auf `neo-plugin-catalog` mit **Contents: Read and write**.
+
+Solange der erste Release nicht erfolgreich war, enthält der Katalogeintrag `"published": false`. Der Neo Plugin Manager ignoriert solche Entwürfe. Der Release-Workflow setzt den Wert erst nach dem Erzeugen des ZIPs und der Prüfsumme auf `true`.
+
 ## Einen Release veröffentlichen
 
 ### 1. Version im Plugin erhöhen
