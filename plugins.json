@@ -2,6 +2,18 @@
   "schema_version": 1,
   "plugins": [
     {
+      "slug": "neo-contacts",
+      "plugin_file": "neo-contacts/neo-contacts.php",
+      "name": "Neo Contacts",
+      "version": "0.3.7",
+      "package": "https://github.com/neo-consult/neo-contacts/releases/download/v0.3.7/neo-contacts.zip",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "homepage": "https://github.com/neo-consult/neo-contacts",
+      "requires": "6.0",
+      "requires_php": "8.1",
+      "description": "Kontakt- und Organisationsmanagement für Neo Dashboard."
+    },
+    {
       "slug": "neo-plugin-manager",
       "plugin_file": "neo-plugin-manager/neo-plugin-manager.php",
       "name": "Neo Plugin Manager",
